@@ -12,7 +12,7 @@ test('unauthenticated user cannot get our data', function () {
     ->assertStatus(401);
 });
 
-test('should teturn user data', function () {
+test('should return user data', function () {
     $user = User::factory()->create();
 
     $token = $user->createToken('2e2_test')->plainTextToken;
@@ -31,7 +31,7 @@ test('should teturn user data', function () {
     ->assertOk();
 });
 
-test('should teturn user data and your permissions', function () {
+test('should return user data and your permissions', function () {
 
     Permission::factory()->count(10)->create();
 
