@@ -46,8 +46,6 @@ describe('Validation', function(){
         ->assertJsonValidationErrors([
             'email'=>trans('validation.required', ['attribute' => 'email'])
         ]);
-
-
     });
 
     it('should require password', function(){
@@ -60,7 +58,6 @@ describe('Validation', function(){
         ])
         ->assertStatus(422)
         ->assertJsonValidationErrors([
-
             'password'=>trans('validation.required', ['attribute' => 'password'])
         ]);
 
